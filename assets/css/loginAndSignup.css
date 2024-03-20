@@ -1,0 +1,78 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  font-family: "Montserrat Alternates", sans-serif;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 70px ), repeating-linear-gradient( #f7f7f755, #dbdbdb );
+}
+main {
+  width: 100vw;
+  display: grid;
+  place-content: center;
+}
+.form {
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255,0.7);
+  backdrop-filter: blur(20px);
+  --webkit-backdrop-filter: blur(20px);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 25rem;
+  display: grid;
+  grid-template-rows: 4;
+  gap: 1rem;
+}
+input,
+button {
+  display: block;
+  border: none;
+  border-radius: 0.5rem;
+}
+input {
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+button {
+  width: inherit;
+  background-color: #00c103c5;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  color: rgb(245, 245, 245);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+button:hover {
+  cursor: pointer;
+}
+#title {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #00c103c5;
+}
+#hr {
+  margin-bottom: 15px;
+  background-color: rgba(84, 178, 255, 0.5);
+  color: rgba(84, 178, 255, 0.2);
+}
+.foot {
+  margin: 0 auto;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(150, 150, 150);
+}
+span {
+  font-size: 0.8rem;
+  padding: 2px 0;
+}
+a {
+  color: rgba(158, 224, 180, 0.6);
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+  text-decoration: underline;
+}

@@ -1,0 +1,57 @@
+#recentWorksHeading{
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.product {
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.15s ease;
+  overflow: hidden;
+}
+
+.product:hover {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgb(220, 220, 220);
+}
+
+.product-image > img {
+  border-radius: 0.25rem 0.25rem 0 0;
+  overflow: hidden;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.product-content {
+  padding: 1rem;
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  border-radius: 0 0 0.25rem 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.15s ease;
+  background-color: #fff;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
