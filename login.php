@@ -60,6 +60,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </form>
 </main>
 
-<?php
-require_once './assets/components/footer.php';
-?>

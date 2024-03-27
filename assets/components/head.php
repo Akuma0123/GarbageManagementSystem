@@ -15,11 +15,13 @@
     '/index.php' => ['style.css'],
     '/requestForm.php'=> ['requestForm.css'],
     '/aboutUs.php'=> ['abt.css'],
+    '/AdminDas.php'=> ['admin.css']
 
   ];
   $scripts = [
     '/login.php' => ['login.js'],
-    '/signup.php' => ['signup.js']
+    '/signup.php' => ['signup.js'],
+    /*'/requestForm.php' => ['dateAndTime.js']  */
   ];
 
   // Respective styles

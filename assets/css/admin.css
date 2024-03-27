@@ -1,218 +1,43 @@
-/* Resetting default margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('./global.css');
+@import url('./nav.css');
 
-/* General styles */
-body {
-  font-family: Arial, sans-serif;
+main{
+  padding: 4rem;
 }
-
-.header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
-
-.header h1 {
-  margin: 0;
-}
-
-.search-box {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-.search-box .text {
-  padding: 5px;
-  width: 150px;
-}
-
-.search-box .sub {
-  padding: 5px 10px;
-  background-color: #ccc;
-  border: none;
-  cursor: pointer;
-}
-
-.notifs {
-  list-style: none;
-  float: right;
-  margin-top: 10px;
-}
-
-.notifs li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.user {
-  float: right;
-  margin-top: 10px;
-  color: #ddd;
-  text-align: center;
-}
-
-.user img {
-  width: 50px;
-  border-radius: 50%;
-}
-
-.sidbar {
-  width: 200px;
-  background-color: #f4f4f4;
-  float: left;
-  height: calc(100vh - 60px); /* Adjusted for the header height */
-  overflow-y: auto;
-}
-
-.menu {
-  list-style: none;
-}
-
-.menu li {
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-.menu li a {
-  color: #333;
-  text-decoration: none;
-}
-
-.menu li span {
-  margin-left: 10px;
-  font-size: 14px;
-  color: #777;
-}
-
-.content {
-  margin-left: 200px; /* Same width as sidebar */
-  padding: 20px;
-}
-
-.row1 {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.row1 .register,
-.row1 .visitors,
-.row1 .messeges {
-  width: 30%;
-  text-align: center;
-}
-
-.row1 h2 {
-  font-size: 36px;
-  color: #333;
-}
-
-.row1 p {
-  margin: 5px 0;
-  color: #777;
-}
-
-.row1 i {
-  font-size: 24px;
-  color: #777;
-}
-
-.row2 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.table-1 {
-  width: 70%;
-  margin-right: 20px;
-}
-
-.table-1 table {
-  width: 100%;
+table {
+  font-family: arial, sans-serif;
   border-collapse: collapse;
+  width: 100%;
 }
 
-.table-1 th, .table-1 td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
-.table-1 caption {
-  font-weight: bold;
-  margin-bottom: 10px;
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
-.box-user {
-  width: 25%;
-  padding: 20px;
-  border: 1px solid #ddd;
-}
-
-.box-user img {
-  width: 100px;
-  border-radius: 50%;
-}
-
-.box-user h4 {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #333;
-}
-
-.box-user h3 {
-  margin: 5px 0;
-  font-size: 16px;
-  color: #777;
-}
-
-.box-user p {
-  color: #777;
-}
-
-.social {
-  margin-top: 10px;
-}
-
-.social a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #333;
-}
-
-.row3 {
-  margin-top: 20px;
+table .imgCell{
   display: flex;
-  justify-content: space-between;
+  column-span: 2/-2;
+  aspect-ratio: 21/9;
+  overflow: scroll;
 }
 
-.growth, .new-user, .visit, .profit {
-  width: 23%;
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ddd;
+table button{
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+  color:white;
 }
 
-.growth i, .new-user i, .visit i, .profit i {
-  font-size: 36px;
-  color: #333;
+
+.acceptBtn{
+  background-color: green;
 }
 
-.growth p, .new-user p, .visit p, .profit p {
-  margin-top: 10px;
-  color: #777;
-}
-
-.growth h2, .new-user h2, .visit h2, .profit h2 {
-  font-size: 24px;
-  color: #333;
-}
-
-.growth span, .new-user span, .visit span, .profit span {
-  font-size: 18px;
-  color: #777;
+.deleteBtn{
+  background-color: red;
 }
