@@ -1,9 +1,9 @@
 <div id="slider">
 <figure>
-<img src="https://c4.wallpaperflare.com/wallpaper/317/78/527/wlop-ghost-blade-ghost-blade-women-wallpaper-preview.jpg" alt>
-<img src="https://c4.wallpaperflare.com/wallpaper/612/299/795/anime-girls-anime-game-wlop-wallpaper-preview.jpg" alt>
-<img src="https://c4.wallpaperflare.com/wallpaper/962/741/136/z-w-gu-women-samurai-katana-wallpaper-preview.jpg" alt>
-<img src="https://c4.wallpaperflare.com/wallpaper/567/756/956/artwork-blue-hair-green-eyes-women-wallpaper-preview.jpg" alt>
-<img src="https://c4.wallpaperflare.com/wallpaper/384/350/430/digital-art-artwork-cyber-cyberpunk-neon-hd-wallpaper-preview.jpg" alt>
+  <img src="https://images.pexels.com/photos/11344694/pexels-photo-11344694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt>
+  <img src="https://images.pexels.com/photos/8544015/pexels-photo-8544015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2=" alt>
+  <img src="https://images.pexels.com/photos/14096351/pexels-photo-14096351.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt>
+<img src="https://images.pexels.com/photos/2682683/pexels-photo-2682683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2=" alt>
+<img src="https://images.pexels.com/photos/9493293/pexels-photo-9493293.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt>
 </figure>
 </div>

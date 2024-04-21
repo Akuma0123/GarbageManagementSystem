@@ -15,7 +15,8 @@
     '/index.php' => ['style.css'],
     '/requestForm.php'=> ['requestForm.css'],
     '/aboutUs.php'=> ['abt.css'],
-    '/AdminDas.php'=> ['admin.css']
+    '/myRequest.php'=> ['myRequest.css']
+
 
   ];
   $scripts = [
