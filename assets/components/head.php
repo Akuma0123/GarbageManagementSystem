@@ -15,7 +15,11 @@
     '/index.php' => ['style.css'],
     '/requestForm.php'=> ['requestForm.css'],
     '/aboutUs.php'=> ['abt.css'],
-    '/myRequest.php'=> ['myRequest.css']
+    '/myRequest.php'=> ['myRequest.css'],
+    '/notification.php'=> ['notification.css'],
+    '/user.php'=> ['user.css']
+
+
 
 
   ];

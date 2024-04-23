@@ -11,13 +11,15 @@
           <a href="/login.php">Login</a>
           <a href="/signup.php">Register</a>
           <?php }else { ?>
+            <a href="notification.php" class="<?= $page == 'notification'? 'active-nav': '' ?>"> <i class="fa-solid fa-bell"></i></a>
+
             <a href="myRequest.php" class="<?= $page == 'myRequest'? 'active-nav': '' ?>"><i class="fa-solid fa-user"></i></a>
-          <i class="fa-solid fa-bell"></i>
         <a href="requestForm.php" class="<?= $page == 'request'? 'active-nav': '' ?>">Request</a>
           <div class="user">
           <p class="username"><?= $_SESSION['username']; ?> <i class="fa-solid fa-caret-down"></i></p>
 
-          
+         
+
 
             <div id="user-menus"> 
             <a href="/logout.php">Logout</a>
