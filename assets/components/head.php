@@ -17,7 +17,9 @@
     '/aboutUs.php'=> ['abt.css'],
     '/myRequest.php'=> ['myRequest.css'],
     '/notification.php'=> ['notification.css'],
-    '/user.php'=> ['user.css']
+    '/user.php'=> ['user.css'],
+    '/edit.php'=> ['edit_request.css']
+    
 
 
 

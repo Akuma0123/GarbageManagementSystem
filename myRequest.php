@@ -99,9 +99,9 @@ if (isset($_POST['delete'])) {
                 </div>
                 <td>
                     <!-- edit form -->
-                    <form method="post">
+                    <form method="post" action="edit.php">
                         <input type="hidden" name="request_id" value="<?php echo $r['id']; ?>">
-                        <button type="submit" name="accept" class="acceptBtn">
+                        <button type="submit" name="edit" class="acceptBtn">
                             <i class="fa-regular fa-pen-to-square"></i>
                         </button>
                     </form>
