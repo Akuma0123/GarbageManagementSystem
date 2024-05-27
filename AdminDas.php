@@ -46,7 +46,7 @@ if (isset($_POST['login'])) {
 
 // Redirect to login page if not logged in
 if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
-    header('Location: admin_login.php');
+    header('Location: adminDas.php');
     exit();
 }
 
@@ -75,6 +75,31 @@ if (isset($_POST['accept'])) {
     $stmt->execute();
     $stmt->close();
 }
+if (isset($_POST['finished'])) {
+    // Code to update the status of the request in the database
+    $requestId = $_POST['request_id']; // Assuming you have a hidden input field for request ID
+    // Perform database update query
+    // Example: UPDATE requests SET status = 'Finished' WHERE id = $requestId;
+
+    // Fetch the request details including user_id
+    $query = "SELECT * FROM requests WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $requestId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $request = $result->fetch_assoc(); // Fetch the request details
+
+    // After updating the request status
+    // Insert a notification for the user
+    $content = "Your request has been finished."; // Notification content
+    $userId = $request['user_id']; // Assuming 'user_id' is the field in your requests table
+    $sql = "INSERT INTO notifications (user_id, content) VALUES (?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("is", $userId, $content);
+    $stmt->execute();
+    $stmt->close();
+}
+
 
 // Delete Button Action
 if (isset($_POST['delete'])) {
@@ -130,9 +155,8 @@ $result = $stmt->get_result();
             <h1 class="logo">ADMIN Dashboard</h1>
         </div>
         <nav class="header-navigation">
+            <a href="#" class="<?= $page == 'requests' ? 'active-nav' : '' ?>">Requests</a>
             <a href="/user.php" class="<?= $page == 'user' ? 'active-nav' : '' ?>">Users</a>
-            <a href="/admin_requests.php" class="<?= $page == 'requests' ? 'active-nav' : '' ?>">Requests</a>
-            <a href="/admin_notify.php" class="<?= $page == 'notify' ? 'active-nav' : '' ?>">Notify</a>
             <a href="/admin_login.php" class="<?= $logout == 'Logout' ? 'active-nav' : '' ?>">Logout</a>
         </nav>
     </div>
@@ -152,6 +176,7 @@ $result = $stmt->get_result();
             <th>Urgency</th>
             <th>Description</th>
             <th>Image</th>
+            <th>Status</th>
             <th>Accept</th>
             <th>Delete</th>
         </tr>
@@ -177,18 +202,23 @@ $result = $stmt->get_result();
                         <img class="request-img" src="<?php echo $r['img_path_3']; ?>" alt="Image">
                     <?php endif; ?>
                 </td>
+                <td><?php echo $r['status']; ?></td>
                 <td>
                     <!-- accept form  -->
-                    <form method="post">
+                    <form action="update_request_status.php" method="post">
                         <input type="hidden" name="request_id" value="<?php echo $r['id']; ?>">
-                        <button type="submit" name="accept" class="acceptBtn">
+                        <button type="submit" name="accept" class="acceptBtn" data-status= "<?php echo $r['status']; ?>" >
+                            <?php if($r['status']=='pending') : ?>
                             <i class="fa-regular fa-circle-check"></i>
+                            <?php else : ?>
+                                <i class="fa-regular fa-clock"></i>
+                                <?php endif ?>
                         </button>
                     </form>
                 </td>
                 <td>
                     <!-- delete form -->
-                    <form method="post">
+                    <form action="delete_request.php" method="post">
                         <input type="hidden" name="request_id" value="<?php echo $r['id']; ?>">
                         <button type="submit" name="delete" class="deleteBtn">
                             <i class="fa-regular fa-circle-xmark"></i>
@@ -200,6 +230,13 @@ $result = $stmt->get_result();
         </tbody>
     </table>
 </main>
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
 
 <script>
     // JavaScript

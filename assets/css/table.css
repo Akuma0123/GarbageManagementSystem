@@ -1,3 +1,7 @@
+.container{
+  padding: 1rem;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -22,18 +26,28 @@ table .imgCell{
 }
 
 table button{
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 0.75rem;
   color:white;
 }
 
 
-.acceptBtn{
-  background-color: green;
+button[data-status='pending']{
+  background-color: rgb(255, 157, 0);
 }
 
+button[data-status='accepted']{
+  background-color: rgba(3, 22, 108, 0.921);
+}
+button[data-status='finished']{
+  background-color: rgba(78, 203, 0, 0.921);
+}
 .deleteBtn{
   background-color: red;
+}
+
+.editBtn{
+  background-color: rgba(0, 128, 255, 0.921);
 }
 
 /* CSS */

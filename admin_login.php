@@ -42,14 +42,30 @@
 
 <div class="container">
     <h2>Admin Login</h2>
-    <form method="post" action="/adminDas.php">
+    <form id="adminLoginForm" method="post" action="/AdminDas.php" onsubmit="return validateForm()">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
+        <span id="passwordError" style="color: red; display: none;">Password is incorrect.</span> <!-- Hidden by default -->
         <input type="submit" name="login" value="Login">
     </form>
 </div>
+
+<script>
+    function validateForm() {
+        var password = document.getElementById("password").value;
+
+        // Perform your validation here
+        if (password !== "admin123") { 
+            document.getElementById("passwordError").style.display = "block"; // Display error message
+            return false; // Prevent form submission
+        } else {
+            
+            return true;
+        }
+    }
+</script>
 
 </body>
 </html>

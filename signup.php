@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <main>
   <form class="form" method="post" action="/signup.php">
   <h1 id="title">Sign Up</h1>
-    <input type="text" name="full_name" id="full_name" placeholder="Full Name" required title="Enter name" maxlength="50">
+    <input type="text" name="full_name" id="full_name" placeholder="Full Name" required title="Enter name" maxlength="50" pattern="[A-Za-z\s]+" title="Only alphabets and spaces are allowed">
     <input type="text" name="email" id="email" placeholder="E-mail" required title="Enter e-mail address">
     <input type="password" name="password" id="password" placeholder="Password" required title="Enter password" minlength="8" maxlength="16">
     <input type="password" name="re-password" id="re-password" placeholder="Confirm Password" required title="Re-enter password">
@@ -84,5 +84,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </form>
   
 </main>
-
-
