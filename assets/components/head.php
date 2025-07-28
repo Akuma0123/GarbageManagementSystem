@@ -18,7 +18,11 @@
     '/myRequest.php'=> ['myRequest.css'],
     '/notification.php'=> ['notification.css'],
     '/user.php'=> ['user.css'],
-    '/edit.php'=> ['edit_request.css']
+    '/edit.php'=> ['edit_request.css'],
+    '/driver_login.php'=> ['loginAndSignup.css'],
+    '/driver_signup.php'=> ['loginAndSignup.css'],
+    '/driver_dashboard.php'=> ['dash.css']
+
     
 
 

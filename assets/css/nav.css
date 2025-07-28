@@ -1,78 +1,78 @@
-.header {
-	border-bottom: 1px solid #d0d0d0;
-	min-height: 60px;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	display: flex;
-	justify-content: center;
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 9999;
-}
+  .header {
+    border-bottom: 1px solid #d0d0d0;
+    min-height: 60px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
+  }
 
-.header-content {
-	display: flex;
-	width: 100%;
-	max-width: 2000px;
-	padding-left: 1.25rem; 
-	padding-right: 1.25rem;
-	align-items: center;
-	justify-content: space-between;
-}
+  .header-content {
+    display: flex;
+    width: 100%;
+    max-width: 2000px;
+    padding-left: 1.25rem; 
+    padding-right: 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-.header-navigation {
-	display: flex;
-  gap: 1.5rem;
-	align-items: center;
-}
+  .header-navigation {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
 
-.header-navigation  a {
-  text-decoration: none;
-  font-size: 1rem;
-}
+  .header-navigation  a {
+    text-decoration: none;
+    font-size: 1rem;
+  }
 
-.header-navigation > .user {
-  position: relative;
-  width: max-content;
-}
+  .header-navigation > .user {
+    position: relative;
+    width: max-content;
+  }
 
-.header-navigation > .user > .username {
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
-  background-color: rgb(36, 36, 36);
-  color: white;
-  position: relative;
-  display: block;
-}
+  .header-navigation > .user > .username {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    position: relative;
+    display: block;
+  }
 
-.header-navigation > .active-nav {
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
-  background-color: rgb(36, 36, 36);
-  color: white;
-}
-
-
-.header-navigation > .user > #user-menus  {
-  display: none;
-  border-radius: 0.5rem;
-  position: absolute;
-  right: 0;
-  padding: 1rem;
-  background-color: white;
-}
-
-.header-navigation > .user > #user-menus > a {
-  padding: 0.25rem 0;
-}
-
-.header-navigation .user:hover > #user-menus {
-  display: block;
-}
+  .header-navigation > .active-nav {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(36, 36, 36);
+    color: white;
+  }
 
 
-.logo {
-	font-size: 1.25rem;
-	font-weight: 700;
-}
+  .header-navigation > .user > #user-menus  {
+    display: none;
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    background-color: white;
+  }
+
+  .header-navigation > .user > #user-menus > a {
+    padding: 0.25rem 0;
+  }
+
+  .header-navigation .user:hover > #user-menus {
+    display: block;
+  }
+
+
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
